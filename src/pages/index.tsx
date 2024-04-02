@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Lato } from "next/font/google";
-import { FaCheck } from "react-icons/fa6";
+import { FaReadme, FaTrophy } from "react-icons/fa6";
+import { GiMuscleUp } from "react-icons/gi";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const inter = Lato({
@@ -71,34 +72,44 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="flex md:flex-row flex-col gap-6 items-start">
-          <h2 className="md:text-[40px] text-[30px] font-black w-full">
+        <div className="flex flex-col gap-6 items-center">
+          <h2 className="md:text-[40px] text-[30px] font-black w-full text-center">
             O que você vai aprender neste treinamento
           </h2>
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex gap-4 items-center">
-              <FaCheck size={24} />
-              <p>
-                Parte UM - Fundamentos do Jiu Jitsu <br />
-                Aprenda as bases sólidas deste arte marcial, desde os movimentos
-                básicos até técnicas avançadas de defesa e ataque.
-              </p>
+          <div className="flex flex-col gap-10 w-full max-w-screen-sm ">
+            <div className="flex gap-4 items-start">
+              <FaReadme size={40} color="ef4444" />
+              <div>
+                <h3 className="text-lg font-semibold">
+                  Fundamentos do Jiu Jitsu
+                </h3>
+                <p>
+                  Aprenda as bases sólidas deste arte marcial, desde os
+                  movimentos básicos até técnicas avançadas de defesa e ataque.
+                </p>
+              </div>
             </div>
-            <div className="flex gap-4 items-center">
-              <FaCheck size={24} />
-              <p>
-                Parte DOIS - Aperfeiçoamento Técnico <br />
-                Refine sua técnica e aprimore seu estilo de luta, dominando
-                estratégias eficazes para superar seus oponentes.
-              </p>
+            <div className="flex gap-4 items-start">
+              <GiMuscleUp size={40} color="ef4444" />
+              <div>
+                <h3 className="text-lg font-semibold">
+                  Aperfeiçoamento Técnico
+                </h3>
+                <p>
+                  Refine sua técnica e aprimore seu estilo de luta, dominando
+                  estratégias eficazes para superar seus oponentes.
+                </p>
+              </div>
             </div>
-            <div className="flex gap-4 items-center">
-              <FaCheck size={24} />
-              <p>
-                Parte TRÊS - Mentalidade Vitoriosa <br />
-                Desenvolva uma mentalidade forte e determinada que o guiará não
-                apenas no tatame, mas em todas as áreas da sua vida.
-              </p>
+            <div className="flex gap-4 items-start">
+              <FaTrophy size={40} color="ef4444" />
+              <div>
+                <h3 className="text-lg font-semibold">Mentalidade Vitoriosa</h3>
+                <p>
+                  Desenvolva uma mentalidade forte e determinada que o guiará
+                  não apenas no tatame, mas em todas as áreas da sua vida.
+                </p>
+              </div>
             </div>
           </div>
         </div>

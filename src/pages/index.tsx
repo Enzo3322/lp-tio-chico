@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
 import { Lato } from "next/font/google";
 import { FaCheck } from "react-icons/fa6";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -19,15 +18,7 @@ export default function Home() {
     <main
       className={`flex flex-col md:gap-40 gap-20 md:px-36 p-5 max-w-screen-xl m-auto ${inter.className}`}
     >
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-        id="hero"
-      >
+      <section id="hero">
         <div className="flex flex-col items-center gap-4 text-center">
           {/* <p className="text-sm text-gray-900 uppercase">TCJJ Apresenta</p> */}
           <img
@@ -78,15 +69,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-      >
+      </section>
+      <section>
         <div className="flex md:flex-row flex-col gap-6 items-start">
           <h2 className="md:text-[40px] text-[30px] font-black w-full">
             O que você vai aprender neste treinamento
@@ -118,15 +102,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-      >
+      </section>
+      <section>
         <div className="flex flex-col gap-10">
           <h2 className="md:text-[40px] text-[30px] font-black w-full text-center">
             Acesso a um conhecimento profundo do Jiu Jitsu
@@ -149,15 +126,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-      >
+      </section>
+      <section>
         <div className="flex flex-col gap-10">
           <h2 className="md:text-[40px] text-[30px] font-black w-full text-center">
             Aprimore sua técnica
@@ -180,15 +150,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-      >
+      </section>
+      <section>
         <div className="flex flex-col gap-10">
           <h2 className="md:text-[40px] text-[30px] font-black w-full text-center">
             Mentalidade Vitoriosa
@@ -211,15 +174,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{
-          scale: 1,
-          transition: { duration: 0.5 },
-          opacity: 1,
-        }}
-      >
+      </section>
+      <section>
         <div className="flex flex-col items-center gap-10 mb-20">
           <h2 className="md:text-[40px] text-[30px] font-black w-full text-center max-w-4xl">
             Tenha acesso a aulas completas e exclusivas de Jiu Jitsu, com mais
@@ -227,7 +183,7 @@ export default function Home() {
           </h2>
           <button className={btnStyles}>ASSINAR MATERIAL</button>
         </div>
-      </motion.section>
+      </section>
     </main>
   );
 }

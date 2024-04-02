@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4 text-center">
           {/* <p className="text-sm text-gray-900 uppercase">TCJJ Apresenta</p> */}
           <img
-            src="/logo.png"
+            src={`${basePath}logo.png`}
             alt="Logo tio chico jiu jitsu"
             className="w-40  mix-blend-multiply"
           />
